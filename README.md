@@ -29,3 +29,31 @@
 - `wireless_battery_widget_steelseries.py`：兼容原有 SteelSeries 启动方式的同一版本。
 
 设备支持情况依赖其具体型号和连接协议；厂商接口或日志格式变化也可能导致读取失效。
+
+---
+
+## English
+
+Wireless Battery Widget is a floating Windows desktop panel for checking the battery levels of wireless mice, keyboards, headsets and controllers. It supports dragging, always-on-top mode, custom backgrounds, low-battery notifications and startup with Windows.
+
+### Battery sources
+
+- Windows Bluetooth and BLE Battery Service, and XInput-compatible controllers.
+- Logitech G HUB's local interface and Razer Synapse logs.
+- ATK/VXE V75X through the ATK HUB page.
+- SteelSeries Arctis 7 (2019) through HID; other models may use Windows Bluetooth or SteelSeries GG logs.
+
+Availability depends on the device, connection and vendor software. Devices without a readable level may show `--`; XInput may report only coarse battery levels.
+
+### Getting started
+
+1. Install Python with Tkinter on Windows. For background images, optionally install Pillow: `python -m pip install Pillow`.
+2. Install and run the relevant vendor software for your devices. ATK HUB support also requires Node.js.
+3. Double-click `run_wireless_battery_widget.bat`. Drag the panel with the left mouse button and right-click it for settings.
+
+The app creates `wireless_battery_widget_config.json` on first run. The optional ATK HUB background task can be installed from the context menu and may require administrator permission.
+
+The panel can also show Codex usage and a DeepSeek balance, using local DSH credentials or `DEEPSEEK_API_KEY`. Credentials and personal configuration are not included in this repository.
+
+Vendor interfaces and log formats can change; support varies by model and connection protocol.
+
