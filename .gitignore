@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+wireless_battery_widget_config.json
+backgrounds/
+atk_debug_profile/
+*.log
+.env

@@ -29,4 +29,3 @@
 - `wireless_battery_widget_steelseries.py`：兼容原有 SteelSeries 启动方式的同一版本。
 
 设备支持情况依赖其具体型号和连接协议；厂商接口或日志格式变化也可能导致读取失效。
-
